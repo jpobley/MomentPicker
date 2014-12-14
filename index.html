@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Date Range Selector</title>
+
+        <link rel="stylesheet" type="text/css" href="dist/css/cal.min.css">
+    </head>
+
+    <body>
+
+        <!--the month-->
+        <div class="wrapper">
+            <span data-step="-1" class="month-switch" id="prev-date"></span>
+            <span data-step="1" class="month-switch" id="next-date"></span>
+            <h1 id="month-name"></h1>
+        </div>
+
+        <!--the calendar-->
+        <div id="grid" class="wrapper"></div>
+
+        <!--buttons-->
+        <div class="wrapper">
+            <button id="reset" type="button">Reset</button>
+        </div>
+
+        <!--output-->
+        <div id="output" class="wrapper">
+            <div id="summary"></div>
+            <div id="full"></div>
+        </div>
+
+        <!--JS-->
+        <script type="text/javascript" src="dist/js/cal.min.js"></script>
+    </body>
+</html>
