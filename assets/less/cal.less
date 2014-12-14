@@ -1,0 +1,84 @@
+@import 'theme.less';
+@import 'mixins.less';
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    padding-top: 30px;
+    color: @dgr;
+    font-family: @font;
+    font-weight: 300;
+    background: @lgr;
+}
+.wrapper {
+    width: 476px;
+    margin: 20px auto;
+    text-align: center;
+    clear: both;
+    display: none;
+}
+.day {
+    background: @wht;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    margin: 4px;
+    float: left;
+    display: table;
+    border-radius: 50%;
+    .transition(background, 100ms, ease-in-out);
+
+    &.start, &.end, &.selected, &.hover {
+        background: @blu;
+        color: @wht;
+    }
+    &.highlight {
+        border: 2px solid @blu;
+    }
+    &.today {
+        background: @brn;
+    }
+    > span {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+#reset {
+    padding: 10px 20px;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    color: @wht;
+    font-weight: bold;
+    &:hover {
+        background: @red;
+    }
+}
+#output {
+    font-size: 32px;
+    width: 100%;
+}
+.month-switch {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin: 7px 4px;
+    cursor: pointer;
+
+    #prev-date& {
+        float: left;
+        border-color: transparent @blu transparent transparent;
+        border-width: 12px 20.8px 12px 0;
+    }
+    #next-date& {
+        float: right;
+        border-color: transparent transparent transparent @blu;
+        border-width: 12px 0 12px 20.8px;
+    }
+}

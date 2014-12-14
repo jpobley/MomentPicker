@@ -1,0 +1,12 @@
+/*
+ *
+ * Mixins
+ *
+ */
+
+.transition(@prop, @time, @func) {
+    -webkit-transition: @prop @time @func; 
+    -moz-transition:    @prop @time @func; 
+    -o-transition:      @prop @time @func; 
+    transition:         @prop @time @func;
+}
